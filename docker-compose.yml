@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  back_end:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask_app
+    ports:
+      - "5001:5000"
+    environment:
+      # Reference variables from .env file
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    volumes:
+        - ./back_end:/app
+    networks:
+        - my_network
+  front_end:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+        - ./front_end:/app
+    networks:
+        - my_network
+
+networks:
+    my_network:
+        driver: bridge
+

@@ -1,0 +1,30 @@
+# Flask and general web dependencies
+Flask==2.3.2
+Flask-Cors==3.0.10
+
+# SQL and database dependencies
+SQLAlchemy==2.0.10         # ORM for SQL operations
+psycopg2-binary==2.9.7     # PostgreSQL driver, if using PostgreSQL
+pymysql==1.0.3             # MySQL driver, if using MySQL
+
+# Pandas and data analysis dependencies
+pandas==2.1.1              # Data manipulation
+numpy==1.25.2              # Numerical operations for Pandas
+
+#for nlp and chat
+langchain
+langchain_postgres
+langchain_openai
+openai
+python-dotenv
+langchain-community
+
+# Vector database dependencies (optional)
+faiss-cpu==1.7.4           # For vector-based similarity searches
+# or if using another vector DB, e.g., Pinecone or Qdrant, add their client library
+# pinecone-client==2.2.1
+
+# Other data processing and support libraries
+scipy==1.11.2              # For scientific computations if needed
+gunicorn==21.2.0           # WSGI HTTP server for production
+requests==2.31.0           # HTTP requests, useful for API calls if needed
